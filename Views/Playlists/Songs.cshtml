@@ -1,0 +1,51 @@
+﻿@model IList<SongPlaylist>
+
+@{
+    ViewData["Title"] = "Songs";
+}
+
+<h4>@ViewData["Album"]</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Album
+            </th>
+            <th>
+                Artist
+            </th>
+            <th>
+                Length
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song.Album.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song.Album.Artist.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song.Length)
+            </td>
+            <td>
+                <a asp-action="Remove" asp-route-id="@item.Id">Remove from playlist</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index">Back to List</a>

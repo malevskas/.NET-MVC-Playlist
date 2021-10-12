@@ -1,0 +1,62 @@
+﻿@model NewProject.ViewModels.AddSongsViewModel
+
+@{
+    ViewData["Title"] = "Add Songs";
+}
+
+<h1>Add Songs</h1>
+
+<h4>Playlist</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddSongs">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Playlist.Id" />
+            <div class="form-group">
+                <label asp-for="Playlist.Name" class="control-label"></label>
+                <input asp-for="Playlist.Name" class="form-control" />
+                <span asp-validation-for="Playlist.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label asp-for="Playlist.Minutes" class="control-label"></label>
+                <input asp-for="Playlist.Minutes" class="form-control" />
+                <span asp-validation-for="Playlist.Minutes" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label asp-for="Playlist.Seconds" class="control-label"></label>
+                <input asp-for="Playlist.Seconds" class="form-control" />
+                <span asp-validation-for="Playlist.Seconds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Playlist.UserId" class="control-label"></label>
+                <select asp-for="Playlist.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="Playlist.UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Songs</label>
+                <select asp-for="SelectedSongs" class="form-control js-example-basic-multiple"
+                        asp-items="Model.SongList"> </select>
+                <span asp-validation-for="SelectedSongs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#SelectedSongs").select2();
+        });
+    </script>
+}
