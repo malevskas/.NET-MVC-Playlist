@@ -7154,11 +7154,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Simona Malevska\\source\\repos\\NewProject\\NewProject.csproj",
+      "projectUniqueName": "C:\\Users\\Simona Malevska\\Desktop\\RSWEBproekt\\NewProject.csproj",
       "projectName": "NewProject",
-      "projectPath": "C:\\Users\\Simona Malevska\\source\\repos\\NewProject\\NewProject.csproj",
+      "projectPath": "C:\\Users\\Simona Malevska\\Desktop\\RSWEBproekt\\NewProject.csproj",
       "packagesPath": "C:\\Users\\Simona Malevska\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Simona Malevska\\source\\repos\\NewProject\\obj\\",
+      "outputPath": "C:\\Users\\Simona Malevska\\Desktop\\RSWEBproekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Simona Malevska\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7226,7 +7226,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

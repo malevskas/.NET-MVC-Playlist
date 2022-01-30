@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dmK0FI623ZY+UKZvrLWWeGJC3zI5I3TwlqK5sCKPjOaWG0SmJyG2kYQ/juY6rO133CL69NNjsZOHJnURXFLwkQ==",
+  "dgSpecHash": "TRoa4Lgzu/5PEBS1+P0hjdE0goQfaacwafRUbz29JxK+zdhes6M7KMUb4XYO59k8VzLQOKnPS3yeodeu/K2+Wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Simona Malevska\\source\\repos\\NewProject\\NewProject.csproj",
+  "projectFilePath": "C:\\Users\\Simona Malevska\\Desktop\\RSWEBproekt\\NewProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Simona Malevska\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Simona Malevska\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

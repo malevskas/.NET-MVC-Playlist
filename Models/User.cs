@@ -19,10 +19,20 @@ namespace NewProject.Models
         public string Username { get; set; }
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
+        public string Type { get; set; }
         [NotMapped]
         public IFormFile ProfileImage { get; set; }
         public string ProfilePicture { get; set; }
         public ICollection<Playlist> Playlists { get; set; }
         public ICollection<Album> Albums { get; set; }
+
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+            
+        }
     }
 }

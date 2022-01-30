@@ -57,7 +57,7 @@ namespace NewProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Username,DateOfBirth,ProfileImage")] User user)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Username,DateOfBirth,Type,ProfileImage")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -83,6 +83,7 @@ namespace NewProject.Controllers
             {
                 return NotFound();
             }
+            ViewData["Types"] = new SelectList(_context.User.Select(x => x.Type).Distinct());
             return View(user);
         }
 
@@ -91,7 +92,7 @@ namespace NewProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Username,DateOfBirth,ProfileImage")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Username,DateOfBirth,Type,ProfileImage")] User user)
         {
             if (id != user.Id)
             {
